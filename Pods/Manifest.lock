@@ -1,0 +1,20 @@
+PODS:
+  - SAMKeychain (1.5.3)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - SAMKeychain
+  - YYModel
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - SAMKeychain
+    - YYModel
+
+SPEC CHECKSUMS:
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 7b0fbef482d79997763c9716fd6a08b9b5cd3f9a
+
+COCOAPODS: 1.7.4

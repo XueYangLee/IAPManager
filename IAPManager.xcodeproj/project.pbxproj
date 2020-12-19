@@ -3,25 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA1FEEC066CC03E1F2E72BDD /* libPods-IAPManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */; };
 		F1A9FF05258DC78900DF1E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF04258DC78900DF1E75 /* AppDelegate.m */; };
-		F1A9FF08258DC78900DF1E75 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF07258DC78900DF1E75 /* SceneDelegate.m */; };
 		F1A9FF0B258DC78900DF1E75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF0A258DC78900DF1E75 /* ViewController.m */; };
 		F1A9FF0E258DC78900DF1E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A9FF0C258DC78900DF1E75 /* Main.storyboard */; };
 		F1A9FF10258DC78A00DF1E75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1A9FF0F258DC78A00DF1E75 /* Assets.xcassets */; };
 		F1A9FF13258DC78A00DF1E75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A9FF11258DC78A00DF1E75 /* LaunchScreen.storyboard */; };
 		F1A9FF16258DC78A00DF1E75 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF15258DC78A00DF1E75 /* main.m */; };
+		F1A9FF26258DC7DD00DF1E75 /* IAPReceiptStore.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF1E258DC7DD00DF1E75 /* IAPReceiptStore.m */; };
+		F1A9FF27258DC7DD00DF1E75 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF1F258DC7DD00DF1E75 /* IAPManager.m */; };
+		F1A9FF28258DC7DD00DF1E75 /* IAPPurchaseContent.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */; };
+		F1A9FF29258DC7DD00DF1E75 /* IAPPaymentVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF25258DC7DD00DF1E75 /* IAPPaymentVerify.m */; };
+		F1A9FF2E258DC86400DF1E75 /* JailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0403567AD973834642F83FC3 /* Pods-IAPManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAPManager.debug.xcconfig"; path = "Target Support Files/Pods-IAPManager/Pods-IAPManager.debug.xcconfig"; sourceTree = "<group>"; };
+		BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IAPManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A9FF00258DC78900DF1E75 /* IAPManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A9FF03258DC78900DF1E75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1A9FF04258DC78900DF1E75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F1A9FF06258DC78900DF1E75 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		F1A9FF07258DC78900DF1E75 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
 		F1A9FF09258DC78900DF1E75 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F1A9FF0A258DC78900DF1E75 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F1A9FF0D258DC78900DF1E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -29,6 +34,18 @@
 		F1A9FF12258DC78A00DF1E75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1A9FF14258DC78A00DF1E75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F1A9FF15258DC78A00DF1E75 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F1A9FF1E258DC7DD00DF1E75 /* IAPReceiptStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPReceiptStore.m; sourceTree = "<group>"; };
+		F1A9FF1F258DC7DD00DF1E75 /* IAPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPManager.m; sourceTree = "<group>"; };
+		F1A9FF20258DC7DD00DF1E75 /* IAPPurchaseContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPPurchaseContent.h; sourceTree = "<group>"; };
+		F1A9FF21258DC7DD00DF1E75 /* IAPPaymentVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPPaymentVerify.h; sourceTree = "<group>"; };
+		F1A9FF22258DC7DD00DF1E75 /* IAPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPManager.h; sourceTree = "<group>"; };
+		F1A9FF23258DC7DD00DF1E75 /* IAPReceiptStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPReceiptStore.h; sourceTree = "<group>"; };
+		F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPPurchaseContent.m; sourceTree = "<group>"; };
+		F1A9FF25258DC7DD00DF1E75 /* IAPPaymentVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPPaymentVerify.m; sourceTree = "<group>"; };
+		F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JailbreakDetection.m; sourceTree = "<group>"; };
+		F1A9FF2D258DC86400DF1E75 /* JailbreakDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailbreakDetection.h; sourceTree = "<group>"; };
+		F1A9FF38258DCB7D00DF1E75 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		F8EA76E7F6A2A1DF771B737C /* Pods-IAPManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAPManager.release.xcconfig"; path = "Target Support Files/Pods-IAPManager/Pods-IAPManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +53,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA1FEEC066CC03E1F2E72BDD /* libPods-IAPManager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BA5F929B4E9191376E1C7F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0403567AD973834642F83FC3 /* Pods-IAPManager.debug.xcconfig */,
+				F8EA76E7F6A2A1DF771B737C /* Pods-IAPManager.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F1A9FEF7258DC78900DF1E75 = {
 			isa = PBXGroup;
 			children = (
 				F1A9FF02258DC78900DF1E75 /* IAPManager */,
 				F1A9FF01258DC78900DF1E75 /* Products */,
+				6BA5F929B4E9191376E1C7F8 /* Pods */,
+				F92B01360507ED06E47E53E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,12 +90,13 @@
 		F1A9FF02258DC78900DF1E75 /* IAPManager */ = {
 			isa = PBXGroup;
 			children = (
+				F1A9FF1D258DC7DD00DF1E75 /* IAPManager */,
+				F1A9FF2B258DC84C00DF1E75 /* Device */,
 				F1A9FF03258DC78900DF1E75 /* AppDelegate.h */,
 				F1A9FF04258DC78900DF1E75 /* AppDelegate.m */,
-				F1A9FF06258DC78900DF1E75 /* SceneDelegate.h */,
-				F1A9FF07258DC78900DF1E75 /* SceneDelegate.m */,
 				F1A9FF09258DC78900DF1E75 /* ViewController.h */,
 				F1A9FF0A258DC78900DF1E75 /* ViewController.m */,
+				F1A9FF38258DCB7D00DF1E75 /* PrefixHeader.pch */,
 				F1A9FF0C258DC78900DF1E75 /* Main.storyboard */,
 				F1A9FF0F258DC78A00DF1E75 /* Assets.xcassets */,
 				F1A9FF11258DC78A00DF1E75 /* LaunchScreen.storyboard */,
@@ -76,6 +106,38 @@
 			path = IAPManager;
 			sourceTree = "<group>";
 		};
+		F1A9FF1D258DC7DD00DF1E75 /* IAPManager */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9FF22258DC7DD00DF1E75 /* IAPManager.h */,
+				F1A9FF1F258DC7DD00DF1E75 /* IAPManager.m */,
+				F1A9FF21258DC7DD00DF1E75 /* IAPPaymentVerify.h */,
+				F1A9FF25258DC7DD00DF1E75 /* IAPPaymentVerify.m */,
+				F1A9FF20258DC7DD00DF1E75 /* IAPPurchaseContent.h */,
+				F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */,
+				F1A9FF23258DC7DD00DF1E75 /* IAPReceiptStore.h */,
+				F1A9FF1E258DC7DD00DF1E75 /* IAPReceiptStore.m */,
+			);
+			path = IAPManager;
+			sourceTree = "<group>";
+		};
+		F1A9FF2B258DC84C00DF1E75 /* Device */ = {
+			isa = PBXGroup;
+			children = (
+				F1A9FF2D258DC86400DF1E75 /* JailbreakDetection.h */,
+				F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */,
+			);
+			path = Device;
+			sourceTree = "<group>";
+		};
+		F92B01360507ED06E47E53E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F1A9FF19258DC78A00DF1E75 /* Build configuration list for PBXNativeTarget "IAPManager" */;
 			buildPhases = (
+				14689BBCE2E350E7774BB1EA /* [CP] Check Pods Manifest.lock */,
 				F1A9FEFC258DC78900DF1E75 /* Sources */,
 				F1A9FEFD258DC78900DF1E75 /* Frameworks */,
 				F1A9FEFE258DC78900DF1E75 /* Resources */,
+				E617B67EAFC3BF149149B37F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,15 +204,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		14689BBCE2E350E7774BB1EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IAPManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E617B67EAFC3BF149149B37F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IAPManager/Pods-IAPManager-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IAPManager/Pods-IAPManager-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IAPManager/Pods-IAPManager-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F1A9FEFC258DC78900DF1E75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1A9FF2E258DC86400DF1E75 /* JailbreakDetection.m in Sources */,
+				F1A9FF27258DC7DD00DF1E75 /* IAPManager.m in Sources */,
+				F1A9FF26258DC7DD00DF1E75 /* IAPReceiptStore.m in Sources */,
+				F1A9FF29258DC7DD00DF1E75 /* IAPPaymentVerify.m in Sources */,
 				F1A9FF0B258DC78900DF1E75 /* ViewController.m in Sources */,
 				F1A9FF05258DC78900DF1E75 /* AppDelegate.m in Sources */,
+				F1A9FF28258DC7DD00DF1E75 /* IAPPurchaseContent.m in Sources */,
 				F1A9FF16258DC78A00DF1E75 /* main.m in Sources */,
-				F1A9FF08258DC78900DF1E75 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,12 +398,15 @@
 		};
 		F1A9FF1A258DC78A00DF1E75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0403567AD973834642F83FC3 /* Pods-IAPManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZS45G9JJF;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IAPManager/PrefixHeader.pch";
 				INFOPLIST_FILE = IAPManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,12 +419,15 @@
 		};
 		F1A9FF1B258DC78A00DF1E75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8EA76E7F6A2A1DF771B737C /* Pods-IAPManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XZS45G9JJF;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/IAPManager/PrefixHeader.pch";
 				INFOPLIST_FILE = IAPManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
