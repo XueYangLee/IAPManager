@@ -1,7 +1,7 @@
 ## IAPManager
 
 自定义封装IAP苹果内购，支付小票信息钥匙串存储
-引用的第三方库 ` SAMKeychain `  ` YYModel `
+引用的第三方库 ` SAMKeychain ` 和 ` YYModel `
 
 #### 使用方式
 
@@ -25,3 +25,8 @@
     DLog(@"结果信息显示：%@",resultMessage)
 }];
 ```
+
+---
+
+#### 注意：服务器验证方法更换
+需在 ` IAPPaymentVerify ` 文件的 ` - (void)verifyFromServerWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp; ` 方法中替换自己服务器验证方式并回传结果回调comp
