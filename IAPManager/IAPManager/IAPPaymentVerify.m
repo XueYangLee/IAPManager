@@ -64,14 +64,19 @@
     NSURLSession *session = [NSURLSession sharedSession];
     
     NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        BOOL success = NO;
         if (!error) {
             NSDictionary *responseObj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-            DLog(@"%@->result",responseObj)
+//            DLog(@"%@->result",responseObj)
             IAPITunesInfo *iTunesInfo = [IAPITunesInfo yy_modelWithJSON:responseObj];
             purchaseContent.iTunesInfo = iTunesInfo;
+            DLog(@"iTunesInfo status = %ld",iTunesInfo.status)
+            if (iTunesInfo && iTunesInfo.status == 0) {
+                success = YES;
+            }
         }
         
-        comp ? comp(error ? NO : YES, purchaseContent) : nil;
+        comp ? comp(success, purchaseContent) : nil;
     }];
     [task resume];
 }
