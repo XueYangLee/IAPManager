@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import <StoreKit/StoreKit.h>
+#import "IAPITunesInfo.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,6 +42,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** 产品价格 */
 @property (nonatomic,assign) float price;
+
+
+/** 本地验证结果  （收据由本地方法验证时有值⚠️  服务器验证时此参数可忽略） */
+@property (nonatomic,strong) IAPITunesInfo *iTunesInfo;
 
 
 

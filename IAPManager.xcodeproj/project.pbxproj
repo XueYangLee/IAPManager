@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04520DEC2592D70000264280 /* IAPITunesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520DEB2592D70000264280 /* IAPITunesInfo.m */; };
 		AA1FEEC066CC03E1F2E72BDD /* libPods-IAPManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */; };
 		F1A9FF05258DC78900DF1E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF04258DC78900DF1E75 /* AppDelegate.m */; };
 		F1A9FF0B258DC78900DF1E75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF0A258DC78900DF1E75 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		0403567AD973834642F83FC3 /* Pods-IAPManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAPManager.debug.xcconfig"; path = "Target Support Files/Pods-IAPManager/Pods-IAPManager.debug.xcconfig"; sourceTree = "<group>"; };
+		04520DEA2592D70000264280 /* IAPITunesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPITunesInfo.h; sourceTree = "<group>"; };
+		04520DEB2592D70000264280 /* IAPITunesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPITunesInfo.m; sourceTree = "<group>"; };
 		BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IAPManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A9FF00258DC78900DF1E75 /* IAPManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A9FF03258DC78900DF1E75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */,
 				F1A9FF23258DC7DD00DF1E75 /* IAPReceiptStore.h */,
 				F1A9FF1E258DC7DD00DF1E75 /* IAPReceiptStore.m */,
+				04520DEA2592D70000264280 /* IAPITunesInfo.h */,
+				04520DEB2592D70000264280 /* IAPITunesInfo.m */,
 			);
 			path = IAPManager;
 			sourceTree = "<group>";
@@ -253,6 +258,7 @@
 			files = (
 				F1A9FF2E258DC86400DF1E75 /* JailbreakDetection.m in Sources */,
 				F1A9FF27258DC7DD00DF1E75 /* IAPManager.m in Sources */,
+				04520DEC2592D70000264280 /* IAPITunesInfo.m in Sources */,
 				F1A9FF26258DC7DD00DF1E75 /* IAPReceiptStore.m in Sources */,
 				F1A9FF29258DC7DD00DF1E75 /* IAPPaymentVerify.m in Sources */,
 				F1A9FF0B258DC78900DF1E75 /* ViewController.m in Sources */,

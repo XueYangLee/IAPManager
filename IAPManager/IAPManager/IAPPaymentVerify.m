@@ -6,6 +6,7 @@
 //
 
 #import "IAPPaymentVerify.h"
+#import <YYModel.h>
 
 @interface IAPPaymentVerify ()
 
@@ -23,6 +24,7 @@
     return self;
 }
 
+#pragma mark - 验证方式
 
 //MARK: 服务器验证  
 - (void)verifyFromServerWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp{
@@ -30,6 +32,51 @@
     
     //purchaseContent内容(receipt、tradeNum、transactionIdentifier等)上报服务器进行二次验证  注意区分沙盒参数
 }
+
+//MARK: 本地验证 （不建议使用，推荐服务器验证）
+- (void)verifyFromITunesURLWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp{
+    //TODO: 本地验证方法 会回传iTunes验证结果  使用方法：在verifyIAPReceiptsWithCompletion中替换verifyFromServerWithPurchaseContent即可
+    NSString *verifyURL = @"https://buy.itunes.apple.com/verifyReceipt";//正式验证地址
+    #ifdef DEBUG
+    //注意实际操作需要区分处理审核模式
+    verifyURL = @"https://sandbox.itunes.apple.com/verifyReceipt";//沙盒验证地址
+    #endif
+    
+    NSString *receiptSecret = @"";//需替换APP专用共享秘钥⚠️
+    if (!receiptSecret.length) {
+        DLog(@"APP专用共享秘钥缺失")
+        return;
+    }
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setValue:purchaseContent.receipt forKey:@"receipt-data"];
+    [params setValue:receiptSecret forKey:@"password"];//注意替换APP专用共享秘钥⚠️
+    
+    NSError *jsonError;
+    NSData *josonData = [NSJSONSerialization dataWithJSONObject:params options:NSJSONWritingPrettyPrinted error:&jsonError];
+    if (jsonError) {
+        DLog(@"verifyRequestData failed: error = %@", jsonError);
+    }
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:verifyURL]];
+    request.HTTPMethod = @"POST";
+    request.HTTPBody = josonData;
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionTask *task = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        if (!error) {
+            NSDictionary *responseObj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+            DLog(@"%@->result",responseObj)
+            IAPITunesInfo *iTunesInfo = [IAPITunesInfo yy_modelWithJSON:responseObj];
+            purchaseContent.iTunesInfo = iTunesInfo;
+        }
+        
+        comp ? comp(error ? NO : YES, purchaseContent) : nil;
+    }];
+    [task resume];
+}
+
+#pragma mark - 支付信息存储验证逻辑
 
 //保存当前支付收据并服务器验证
 - (void)verifyIAPPurchasedWithReceiptData:(NSData *)receiptData transactionIdentifier:(NSString *)transactionIdentifier completion:(VerifyCompletion)comp{

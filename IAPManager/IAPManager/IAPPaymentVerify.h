@@ -21,10 +21,15 @@ typedef void(^__nullable VerifyCompletion)(BOOL success, IAPPurchaseContent *_Nu
 /** 购买内容 */
 @property (nonatomic,strong) IAPPurchaseContent *_Nullable purchaseContent;
 
+//MARK: - 验证方式
 
 /** 服务器验证方法⚠️   上传服务器验证订单 */
 - (void)verifyFromServerWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp;
 
+/** 本地验证 （不建议使用，推荐服务器验证） */
+- (void)verifyFromITunesURLWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp;
+
+//MARK: - 支付信息存储验证逻辑
 
 /** 保存当前支付收据并服务器验证 */
 - (void)verifyIAPPurchasedWithReceiptData:(NSData *)receiptData transactionIdentifier:(NSString *)transactionIdentifier completion:(VerifyCompletion)comp;

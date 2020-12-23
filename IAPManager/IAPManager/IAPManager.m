@@ -285,7 +285,6 @@
         DLog(@"无购买凭证");
         return;
     }
-//    DLog(@"购买凭证：%@",encodedReceipt)
     
     __weak typeof(self) weakSelf = self;
     [self.paymentVerify verifyIAPPurchasedWithReceiptData:receiptData transactionIdentifier:transactionIdentifier completion:^(BOOL success, IAPPurchaseContent * _Nullable purchaseContent) {
@@ -295,17 +294,12 @@
         }
     }];
     
-    //发送POST请求,对购买凭据进行验证
-    //沙盒验证地址：https://sandbox.itunes.apple.com/verifyReceipt
-    //正式验证地址：https://buy.itunes.apple.com/verifyReceipt
-    
     [self finishTransaction:transaction];
 }
 
 //MARK: 购买失败
 - (void)transactionFailed:(SKPaymentTransaction *)transaction {
     DLog(@"购买失败  errorCode:%ld",transaction.error.code)
-    
     if(transaction.error.code != SKErrorPaymentCancelled) {
         DLog(@"订单错误");
     }else {

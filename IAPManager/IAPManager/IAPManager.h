@@ -62,15 +62,16 @@ typedef void(^FetchProductsCompletion)(NSArray <SKProduct *>*_Nullable products)
 - (void)restoreIAPProductsWithResult:(RestoreResult)result;
 
 
-/** 验证未上报服务器的订单 */
+/** 验证未上报服务器(或本地验证)的订单 */
 - (void)checkUnfinishedTransactionWithCompletion:(VerifyCompletion)comp;
 
 
-/** 获取本地化价格 */
+/** 根据IAP产品信息获取本地化价格 */
 - (NSString *)getLocalePrice:(SKProduct *)product;
 
 /** 支付结果信息 */
 - (NSString *)purchaseResultMessage:(IAPPurchaseResult)result;
+
 
 /** 判断设备是否已经越狱 */
 - (BOOL)isJailbroken;

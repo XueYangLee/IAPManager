@@ -4,6 +4,8 @@
 引用的第三方库 ` SAMKeychain ` 和 ` YYModel `
 
 #### 使用方式
+拖入 ` IAPManager ` 和 ` Device `文件夹，
+如不需要验证越狱设备仅拖入 ` IAPManager `并删除 ` isJailbroken `方法即可 
 
 ###### 1.APP启动及用户登录时需调用开始IAP交易监听方法
 ```
@@ -29,4 +31,4 @@
 ---
 
 #### 注意：服务器验证方法更换
-需在 ` IAPPaymentVerify ` 文件的 ` - (void)verifyFromServerWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp; ` 方法中替换自己服务器验证方式并回传结果回调comp
+需在 ` IAPPaymentVerify ` 文件的 ` - (void)verifyFromServerWithPurchaseContent:(IAPPurchaseContent *)purchaseContent comp:(VerifyCompletion)comp; ` 方法中替换自己服务器验证方式并回传结果回调` comp `
