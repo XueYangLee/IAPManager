@@ -27,13 +27,26 @@
 
 
 - (void)paymentClick{
+    //直接根据IAPid直接支付
     [[IAPManager sharedManager] payWithPurchaseContent:^(IAPPurchaseContent * _Nullable purchaseContent) {
-        purchaseContent.tradeNum=@"订单号";
-        purchaseContent.productId=@"IAP订单id";
-//        purchaseContent.product=@"IAP订单Product信息";
+        purchaseContent.tradeNum=@"支付的订单号";
+        purchaseContent.productId=@"支付的IAP订单id";
     } result:^(IAPPurchaseResult result, IAPPurchaseContent * _Nullable purchaseContent, NSString * _Nullable resultMessage) {
         DLog(@"结果信息显示：%@",resultMessage)
     }];
+    
+    /*
+    //先统一查询订单Product信息（或在APP启动时查询全部并保存）  再根据订单信息支付
+    [[IAPManager sharedManager] fetchProductInfoWithProductIdentifiers:@[@"IAP订单id"] completion:^(NSArray<SKProduct *> * _Nullable products) {
+        
+        [[IAPManager sharedManager] payWithPurchaseContent:^(IAPPurchaseContent * _Nullable purchaseContent) {
+            purchaseContent.tradeNum=@"支付的订单号";
+            purchaseContent.product=products.firstObject;
+        } result:^(IAPPurchaseResult result, IAPPurchaseContent * _Nullable purchaseContent, NSString * _Nullable resultMessage) {
+            DLog(@"结果信息显示：%@",resultMessage)
+        }];
+        
+    }];*/
 }
 
 
