@@ -9,7 +9,7 @@
 #import <StoreKit/StoreKit.h>
 
 #import "IAPReceiptStore.h"
-#import "JailbreakDetection.h"
+#import "IAPJailbreakDetection.h"
 
 @interface IAPManager () <SKPaymentTransactionObserver,SKProductsRequestDelegate>
 
@@ -428,7 +428,7 @@
 
 //MARK: 判断是否越狱
 - (BOOL)isJailbroken{
-    return [JailbreakDetection isJailBroken];
+    return [IAPJailbreakDetection isJailBroken];
 }
 
 

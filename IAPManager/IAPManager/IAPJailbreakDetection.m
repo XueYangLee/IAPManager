@@ -1,16 +1,16 @@
 //
-//  JailbreakDetection.m
-//  NowMeditation
+//  IAPJailbreakDetection.m
+//  IAPManager
 //
-//  Created by Singularity on 2020/11/19.
+//  Created by 李雪阳 on 2021/1/14.
 //
 
-#import "JailbreakDetection.h"
+#import "IAPJailbreakDetection.h"
 #import <UIKit/UIKit.h>
 
 #define ARRAY_SIZE(a) sizeof(a)/sizeof(a[0])
 
-@implementation JailbreakDetection
+@implementation IAPJailbreakDetection
 
 // 四种检查是否越狱的方法, 只要命中一个, 就说明已经越狱.
 + (BOOL)isJailBroken {

@@ -4,8 +4,7 @@
 引用的第三方库 ` SAMKeychain ` 和 ` YYModel `
 
 #### 使用方式
-拖入 ` IAPManager ` 和 ` Device `文件夹，
-如不需要验证越狱设备仅拖入 ` IAPManager `并删除 ` isJailbroken `方法即可 
+拖入 ` IAPManager ` 文件夹，
 
 ###### 1.APP启动及用户登录时需调用开始IAP交易监听方法
 ```

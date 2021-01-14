@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		04520DEC2592D70000264280 /* IAPITunesInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 04520DEB2592D70000264280 /* IAPITunesInfo.m */; };
 		AA1FEEC066CC03E1F2E72BDD /* libPods-IAPManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */; };
+		F19CCA5325B068F80051E159 /* IAPJailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = F19CCA5225B068F80051E159 /* IAPJailbreakDetection.m */; };
 		F1A9FF05258DC78900DF1E75 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF04258DC78900DF1E75 /* AppDelegate.m */; };
 		F1A9FF0B258DC78900DF1E75 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF0A258DC78900DF1E75 /* ViewController.m */; };
 		F1A9FF0E258DC78900DF1E75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1A9FF0C258DC78900DF1E75 /* Main.storyboard */; };
@@ -19,7 +20,6 @@
 		F1A9FF27258DC7DD00DF1E75 /* IAPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF1F258DC7DD00DF1E75 /* IAPManager.m */; };
 		F1A9FF28258DC7DD00DF1E75 /* IAPPurchaseContent.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */; };
 		F1A9FF29258DC7DD00DF1E75 /* IAPPaymentVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF25258DC7DD00DF1E75 /* IAPPaymentVerify.m */; };
-		F1A9FF2E258DC86400DF1E75 /* JailbreakDetection.m in Sources */ = {isa = PBXBuildFile; fileRef = F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +27,8 @@
 		04520DEA2592D70000264280 /* IAPITunesInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPITunesInfo.h; sourceTree = "<group>"; };
 		04520DEB2592D70000264280 /* IAPITunesInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPITunesInfo.m; sourceTree = "<group>"; };
 		BA4853E5665AEE571D0CD9AB /* libPods-IAPManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IAPManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F19CCA5125B068F80051E159 /* IAPJailbreakDetection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IAPJailbreakDetection.h; sourceTree = "<group>"; };
+		F19CCA5225B068F80051E159 /* IAPJailbreakDetection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IAPJailbreakDetection.m; sourceTree = "<group>"; };
 		F1A9FF00258DC78900DF1E75 /* IAPManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IAPManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1A9FF03258DC78900DF1E75 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F1A9FF04258DC78900DF1E75 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -45,8 +47,6 @@
 		F1A9FF23258DC7DD00DF1E75 /* IAPReceiptStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPReceiptStore.h; sourceTree = "<group>"; };
 		F1A9FF24258DC7DD00DF1E75 /* IAPPurchaseContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPPurchaseContent.m; sourceTree = "<group>"; };
 		F1A9FF25258DC7DD00DF1E75 /* IAPPaymentVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPPaymentVerify.m; sourceTree = "<group>"; };
-		F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JailbreakDetection.m; sourceTree = "<group>"; };
-		F1A9FF2D258DC86400DF1E75 /* JailbreakDetection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JailbreakDetection.h; sourceTree = "<group>"; };
 		F1A9FF38258DCB7D00DF1E75 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		F8EA76E7F6A2A1DF771B737C /* Pods-IAPManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IAPManager.release.xcconfig"; path = "Target Support Files/Pods-IAPManager/Pods-IAPManager.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				F1A9FF1D258DC7DD00DF1E75 /* IAPManager */,
-				F1A9FF2B258DC84C00DF1E75 /* Device */,
 				F1A9FF03258DC78900DF1E75 /* AppDelegate.h */,
 				F1A9FF04258DC78900DF1E75 /* AppDelegate.m */,
 				F1A9FF09258DC78900DF1E75 /* ViewController.h */,
@@ -122,17 +121,10 @@
 				F1A9FF1E258DC7DD00DF1E75 /* IAPReceiptStore.m */,
 				04520DEA2592D70000264280 /* IAPITunesInfo.h */,
 				04520DEB2592D70000264280 /* IAPITunesInfo.m */,
+				F19CCA5125B068F80051E159 /* IAPJailbreakDetection.h */,
+				F19CCA5225B068F80051E159 /* IAPJailbreakDetection.m */,
 			);
 			path = IAPManager;
-			sourceTree = "<group>";
-		};
-		F1A9FF2B258DC84C00DF1E75 /* Device */ = {
-			isa = PBXGroup;
-			children = (
-				F1A9FF2D258DC86400DF1E75 /* JailbreakDetection.h */,
-				F1A9FF2C258DC86300DF1E75 /* JailbreakDetection.m */,
-			);
-			path = Device;
 			sourceTree = "<group>";
 		};
 		F92B01360507ED06E47E53E3 /* Frameworks */ = {
@@ -256,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A9FF2E258DC86400DF1E75 /* JailbreakDetection.m in Sources */,
+				F19CCA5325B068F80051E159 /* IAPJailbreakDetection.m in Sources */,
 				F1A9FF27258DC7DD00DF1E75 /* IAPManager.m in Sources */,
 				04520DEC2592D70000264280 /* IAPITunesInfo.m in Sources */,
 				F1A9FF26258DC7DD00DF1E75 /* IAPReceiptStore.m in Sources */,

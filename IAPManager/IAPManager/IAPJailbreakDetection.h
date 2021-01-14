@@ -1,15 +1,15 @@
 //
-//  JailbreakDetection.h
-//  NowMeditation
+//  IAPJailbreakDetection.h
+//  IAPManager
 //
-//  Created by Singularity on 2020/11/19.
+//  Created by 李雪阳 on 2021/1/14.
 //
 
 #import <Foundation/Foundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JailbreakDetection : NSObject
+@interface IAPJailbreakDetection : NSObject
 
 /** 判断当前设备是否已经越狱 */
 + (BOOL)isJailBroken;
