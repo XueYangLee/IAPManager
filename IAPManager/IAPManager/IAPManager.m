@@ -208,12 +208,12 @@
         DLog(@"描述信息----->%@\n产品标题----->%@\n产品描述信息----->%@\n价格(货币)----->%@(%@)\n\nproductIdentifier----->%@\n",product.description, product.localizedTitle, product.localizedDescription, product.price, product.priceLocale.currencyCode, product.productIdentifier)
     }
     
-    if (self.paymentVerify.purchaseContent.productId) {
-        self.paymentVerify.purchaseContent.product = products.firstObject;
-        //发送购买请求
-        SKPayment *payment = [SKPayment paymentWithProduct:products.firstObject];
-        [[SKPaymentQueue defaultQueue] addPayment:payment];
-    }
+//     if (self.paymentVerify.purchaseContent.productId) {
+//         self.paymentVerify.purchaseContent.product = products.firstObject;
+//         //发送购买请求
+//         SKPayment *payment = [SKPayment paymentWithProduct:products.firstObject];
+//         [[SKPaymentQueue defaultQueue] addPayment:payment];
+//     }
 }
 
 //MARK: 反馈请求失败
