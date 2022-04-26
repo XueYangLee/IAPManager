@@ -197,6 +197,8 @@
     
     if (self.fetchProductsComp) {
         self.fetchProductsComp(products);
+        self.fetchProductsComp = nil;
+        return;
     }
     
     if (!products.count) {
